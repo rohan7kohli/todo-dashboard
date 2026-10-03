@@ -8,53 +8,112 @@
   :root { --bg:#0f1115; --card:#1a1d24; --text:#e8eaed; --muted:#9aa0a6; --accent:#8ab4f8; --border:#2a2f3a; }
   * { box-sizing: border-box; }
   body { margin:0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, sans-serif; background:var(--bg); color:var(--text); line-height:1.45; }
-  main { max-width:720px; margin:0 auto; padding:2rem 1.25rem 4rem; }
+  main { max-width:820px; margin:0 auto; padding:2rem 1.25rem 4rem; }
   h1 { font-size:1.5rem; font-weight:600; margin:0 0 .25rem; }
-  .meta { color:var(--muted); font-size:.875rem; margin-bottom:1.75rem; }
+  .meta { color:var(--muted); font-size:.875rem; margin-bottom:1.25rem; }
+  .tabs { display:flex; gap:.5rem; margin-bottom:1rem; }
+  .tabs button { background:#12151c; color:var(--text); border:1px solid var(--border); border-radius:999px; padding:.4rem .9rem; font:inherit; cursor:pointer; }
+  .tabs button.active { background:var(--accent); color:#0f1115; border-color:var(--accent); font-weight:600; }
   section { background:var(--card); border:1px solid var(--border); border-radius:12px; padding:1rem 1.15rem; margin-bottom:1rem; }
   h2 { font-size:.8rem; text-transform:uppercase; letter-spacing:.06em; color:var(--accent); margin:0 0 .65rem; font-weight:600; }
-  ul { margin:0; padding:0; list-style:none; }
-  li { padding:.4rem 0; border-top:1px solid var(--border); font-size:.95rem; }
-  li:first-child { border-top:none; padding-top:0; }
+  table { width:100%; border-collapse:collapse; font-size:.95rem; }
+  th { text-align:left; color:var(--muted); font-weight:500; font-size:.75rem; text-transform:uppercase; letter-spacing:.04em; padding:0 0 .4rem; }
+  td { padding:.45rem 0; border-top:1px solid var(--border); vertical-align:top; }
+  td.date { color:var(--muted); white-space:nowrap; width:7.5rem; }
+  .note { color:var(--muted); font-size:.8rem; margin-top:.5rem; }
+  .hidden { display:none; }
 </style>
 </head>
 <body>
 <main>
   <h1>To-do dashboard</h1>
-  <p class="meta">Updated 3 Oct 2026 · Finances · SMA · Personal · Sirocco</p>
-  <section>
-    <h2>Finances</h2>
-    <ul>
-      <li>Move DBS India money</li>
-    </ul>
-  </section>
-  <section>
-    <h2>SMA</h2>
-    <ul>
-      <li>Boothbay sample portfolio (Clara)</li>
-      <li>Topwater reply</li>
-      <li>Walleye Rory — Zoom slots</li>
-      <li>SocGen — Manifold + Persistent intros</li>
-      <li>Marex clearing — sample book / volumes</li>
-      <li>MCP intro — Natalie Kan / Julian Liew</li>
-    </ul>
-  </section>
-  <section>
-    <h2>Personal</h2>
-    <ul>
-      <li>Alipay / Alipay HK</li>
-      <li>Get insurance</li>
-      <li>Apply for APEC card via ImmD</li>
-    </ul>
-  </section>
-  <section>
-    <h2>Sirocco</h2>
-    <ul>
-      <li>The Red book</li>
-      <li>HKU refund follow-up (waiting on replies)</li>
-      <li>Kristal top-20 ranking</li>
-    </ul>
-  </section>
+  <p class="meta">Updated 3 Oct 2026. Dates only where they were recorded. A dash means the date was not logged.</p>
+  <div class="tabs">
+    <button class="active" id="tab-open" type="button">Open</button>
+    <button id="tab-done" type="button">Done</button>
+  </div>
+
+  <div id="open">
+    <section>
+      <h2>Finances</h2>
+      <table><thead><tr><th>Item</th><th>Added</th></tr></thead><tbody>
+        <tr><td>Move DBS India money</td><td class="date">31 Aug 2026</td></tr>
+      </tbody></table>
+    </section>
+    <section>
+      <h2>SMA</h2>
+      <table><thead><tr><th>Item</th><th>Added</th></tr></thead><tbody>
+        <tr><td>Boothbay sample portfolio (Clara)</td><td class="date">4 Sep 2026</td></tr>
+        <tr><td>Topwater reply</td><td class="date">—</td></tr>
+        <tr><td>Walleye Rory — Zoom slots</td><td class="date">31 Aug 2026</td></tr>
+        <tr><td>SocGen — Manifold + Persistent intros</td><td class="date">—</td></tr>
+        <tr><td>Marex clearing — sample book / volumes</td><td class="date">16 Sep 2026</td></tr>
+        <tr><td>MCP intro — Natalie Kan / Julian Liew</td><td class="date">16 Sep 2026</td></tr>
+      </tbody></table>
+    </section>
+    <section>
+      <h2>Personal</h2>
+      <table><thead><tr><th>Item</th><th>Added</th></tr></thead><tbody>
+        <tr><td>Alipay / Alipay HK</td><td class="date">—</td></tr>
+        <tr><td>Get insurance</td><td class="date">17 Sep 2026</td></tr>
+        <tr><td>Apply for APEC card via ImmD</td><td class="date">17 Sep 2026</td></tr>
+      </tbody></table>
+    </section>
+    <section>
+      <h2>Sirocco</h2>
+      <table><thead><tr><th>Item</th><th>Added</th></tr></thead><tbody>
+        <tr><td>The Red book</td><td class="date">4 Sep 2026</td></tr>
+        <tr><td>HKU refund follow-up</td><td class="date">—</td></tr>
+        <tr><td>Kristal top-20 ranking</td><td class="date">27 Sep 2026</td></tr>
+      </tbody></table>
+    </section>
+  </div>
+
+  <div id="done" class="hidden">
+    <section>
+      <h2>Done</h2>
+      <table><thead><tr><th>Item</th><th>Added</th><th>Done</th></tr></thead><tbody>
+        <tr><td>Superfund conference Singapore</td><td class="date">31 Aug 2026</td><td class="date">3 Oct 2026</td></tr>
+        <tr><td>Confirm OCBC details to TEC (Cherry)</td><td class="date">—</td><td class="date">3 Oct 2026</td></tr>
+        <tr><td>Add Vlad’s GitHub</td><td class="date">—</td><td class="date">3 Oct 2026</td></tr>
+        <tr><td>Add Ting Kai’s GitHub</td><td class="date">—</td><td class="date">3 Oct 2026</td></tr>
+        <tr><td>CUHK Ruiqian Step 5</td><td class="date">—</td><td class="date">2 Oct 2026</td></tr>
+        <tr><td>Activate HSBC, DBS</td><td class="date">31 Aug 2026</td><td class="date">5 Sep 2026</td></tr>
+        <tr><td>Book Dubai hotel (15–19 Sep)</td><td class="date">31 Aug 2026</td><td class="date">4 Sep 2026</td></tr>
+        <tr><td>Pick up YubiKey</td><td class="date">—</td><td class="date">4 Sep 2026</td></tr>
+        <tr><td>Get signed docs from Ruiqian</td><td class="date">—</td><td class="date">4 Sep 2026</td></tr>
+        <tr><td>Check SC card</td><td class="date">—</td><td class="date">4 Sep 2026</td></tr>
+        <tr><td>Meet Prelude</td><td class="date">—</td><td class="date">4 Sep 2026</td></tr>
+        <tr><td>Meet GS / Noamaan</td><td class="date">—</td><td class="date">4 Sep 2026</td></tr>
+        <tr><td>Finish packing</td><td class="date">1 Sep 2026</td><td class="date">4 Sep 2026</td></tr>
+        <tr><td>Yubikey NPC 5C</td><td class="date">1 Sep 2026</td><td class="date">—</td></tr>
+        <tr><td>VPS stress testing</td><td class="date">1 Sep 2026</td><td class="date">—</td></tr>
+        <tr><td>Tailscale setup</td><td class="date">1 Sep 2026</td><td class="date">—</td></tr>
+        <tr><td>Re-activate OCBC</td><td class="date">31 Aug 2026</td><td class="date">—</td></tr>
+        <tr><td>Message Nimita</td><td class="date">15 Sep 2026</td><td class="date">16 Sep 2026</td></tr>
+        <tr><td>Singapore visa — message Chanda</td><td class="date">15 Sep 2026</td><td class="date">16 Sep 2026</td></tr>
+        <tr><td>Kristal — emailed Shruti</td><td class="date">16 Sep 2026</td><td class="date">16 Sep 2026</td></tr>
+        <tr><td>Marex was added 16 Sep and is still open; not listed here</td><td class="date"></td><td class="date"></td></tr>
+        <tr><td>DIFC — met Jack; Albermarle intro</td><td class="date">16 Sep 2026</td><td class="date">21 Sep 2026</td></tr>
+        <tr><td>CUHK FinTech — Jenny Tam bio + photos</td><td class="date">16 Sep 2026</td><td class="date">—</td></tr>
+        <tr><td>Arjun Traders Forum prep call</td><td class="date">16 Sep 2026</td><td class="date">—</td></tr>
+        <tr><td>TEC refund Ruiqian to Nicholas Ho</td><td class="date">—</td><td class="date">21 Sep 2026</td></tr>
+        <tr><td>Alpha Panel talking points</td><td class="date">—</td><td class="date">21 Sep 2026</td></tr>
+        <tr><td>Singapore LinkedIn connections</td><td class="date">—</td><td class="date">24 Sep 2026</td></tr>
+        <tr><td>Fact sheet + investor presentation</td><td class="date">—</td><td class="date">27 Sep 2026</td></tr>
+        <tr><td>Kristal HF presentations + analysis</td><td class="date">—</td><td class="date">27 Sep 2026</td></tr>
+      </tbody></table>
+      <p class="note">A dash means that date was not written down when the item moved.</p>
+    </section>
+  </div>
 </main>
+<script>
+  const openBtn = document.getElementById('tab-open');
+  const doneBtn = document.getElementById('tab-done');
+  const openPane = document.getElementById('open');
+  const donePane = document.getElementById('done');
+  openBtn.onclick = () => { openBtn.classList.add('active'); doneBtn.classList.remove('active'); openPane.classList.remove('hidden'); donePane.classList.add('hidden'); };
+  doneBtn.onclick = () => { doneBtn.classList.add('active'); openBtn.classList.remove('active'); donePane.classList.remove('hidden'); openPane.classList.add('hidden'); };
+</script>
 </body>
 </html>
