@@ -20,6 +20,8 @@
   th { text-align:left; color:var(--muted); font-weight:500; font-size:.75rem; text-transform:uppercase; letter-spacing:.04em; padding:0 0 .4rem; }
   td { padding:.45rem 0; border-top:1px solid var(--border); vertical-align:top; }
   td.date { color:var(--muted); white-space:nowrap; width:7.5rem; }
+  td.status { color: var(--muted); white-space: nowrap; width: 7rem; }
+  td.status.ongoing { color: #fdd663; }
   .note { color:var(--muted); font-size:.8rem; margin-top:.5rem; }
   .hidden { display:none; }
   a { color: var(--accent); }
@@ -28,55 +30,55 @@
 <body>
 <main>
   <h1>To-do dashboard</h1>
-  <p class="meta">Updated 3 Oct 2026. A dash means that date was not logged.</p>
+  <p class="meta">Updated 4 Oct 2026. A dash means that date was not logged.</p>
   <div class="tabs">
     <button class="active" id="tab-open" type="button">Open</button>
     <button id="tab-done" type="button">Done</button>
   </div>
   <div id="open">
     <section><h2>Finances</h2>
-      <table><thead><tr><th>Item</th><th>Added</th></tr></thead><tbody>
-        <tr><td>Move DBS India money</td><td class="date">31 Aug 2026</td></tr>
-        <tr><td>Move DBS HK to IBKR</td><td class="date">3 Oct 2026</td></tr>
+      <table><thead><tr><th>Item</th><th>Status</th><th>Added</th></tr></thead><tbody>
+        <tr><td>Move DBS India money</td><td class="status">Not started</td><td class="date">31 Aug 2026</td></tr>
+        <tr><td>Move DBS HK to IBKR</td><td class="status ongoing">Ongoing</td><td class="date">3 Oct 2026</td></tr>
       </tbody></table></section>
     <section><h2>SMA</h2>
-      <table><thead><tr><th>Item</th><th>Added</th></tr></thead><tbody>
-        <tr><td>Boothbay sample portfolio (Clara)</td><td class="date">4 Sep 2026</td></tr>
-        <tr><td>Topwater reply</td><td class="date">—</td></tr>
-        <tr><td>SocGen — Manifold + Persistent intros</td><td class="date">—</td></tr>
-        <tr><td>Marex clearing — sample book / volumes</td><td class="date">16 Sep 2026</td></tr>
-        <tr><td>MCP intro — Natalie Kan / Julian Liew</td><td class="date">16 Sep 2026</td></tr>
-        <tr><td>Email Family Offices</td><td class="date">3 Oct 2026</td></tr>
-        <tr><td>Update CRM excel</td><td class="date">3 Oct 2026</td></tr>
+      <table><thead><tr><th>Item</th><th>Status</th><th>Added</th></tr></thead><tbody>
+        <tr><td>Boothbay sample portfolio (Clara)</td><td class="status">Not started</td><td class="date">4 Sep 2026</td></tr>
+        <tr><td>Topwater reply</td><td class="status">Not started</td><td class="date">—</td></tr>
+        <tr><td>SocGen — Manifold + Persistent intros</td><td class="status">Not started</td><td class="date">—</td></tr>
+        <tr><td>Marex clearing — sample book / volumes</td><td class="status">Not started</td><td class="date">16 Sep 2026</td></tr>
+        <tr><td>MCP intro — Natalie Kan / Julian Liew</td><td class="status">Not started</td><td class="date">16 Sep 2026</td></tr>
+        <tr><td>Email Family Offices</td><td class="status">Not started</td><td class="date">3 Oct 2026</td></tr>
+        <tr><td>Update CRM excel</td><td class="status">Not started</td><td class="date">3 Oct 2026</td></tr>
       </tbody></table></section>
     <section><h2>VCC/DIFC</h2>
-      <table><thead><tr><th>Item</th><th>Added</th></tr></thead><tbody>
-        <tr><td>Follow-up Kristal</td><td class="date">3 Oct 2026</td></tr>
-        <tr><td>Follow-up Alphaquest</td><td class="date">3 Oct 2026</td></tr>
-        <tr><td>Follow-up Nuvama</td><td class="date">3 Oct 2026</td></tr>
-        <tr><td>Follow-up DIFC</td><td class="date">3 Oct 2026</td></tr>
+      <table><thead><tr><th>Item</th><th>Status</th><th>Added</th></tr></thead><tbody>
+        <tr><td>Follow-up Kristal</td><td class="status">Not started</td><td class="date">3 Oct 2026</td></tr>
+        <tr><td>Follow-up Alphaquest</td><td class="status">Not started</td><td class="date">3 Oct 2026</td></tr>
+        <tr><td>Follow-up Nuvama</td><td class="status">Not started</td><td class="date">3 Oct 2026</td></tr>
+        <tr><td>Follow-up DIFC</td><td class="status">Not started</td><td class="date">3 Oct 2026</td></tr>
       </tbody></table></section>
     <section><h2>Personal</h2>
-      <table><thead><tr><th>Item</th><th>Added</th></tr></thead><tbody>
-        <tr><td>Alipay / Alipay HK</td><td class="date">—</td></tr>
-        <tr><td>Get insurance</td><td class="date">17 Sep 2026</td></tr>
-        <tr><td>Apply for APEC card via ImmD</td><td class="date">17 Sep 2026</td></tr>
-        <tr><td>Book Diwali flight</td><td class="date">3 Oct 2026</td></tr>
-        <tr><td>Book parents’ HK flight</td><td class="date">3 Oct 2026</td></tr>
-        <tr><td>Check parents’ HK Visa renewal</td><td class="date">3 Oct 2026</td></tr>
-        <tr><td>Dad US visa</td><td class="date">3 Oct 2026</td></tr>
+      <table><thead><tr><th>Item</th><th>Status</th><th>Added</th></tr></thead><tbody>
+        <tr><td>Alipay / Alipay HK</td><td class="status">Not started</td><td class="date">—</td></tr>
+        <tr><td>Get insurance</td><td class="status">Not started</td><td class="date">17 Sep 2026</td></tr>
+        <tr><td>Apply for APEC card via ImmD</td><td class="status">Not started</td><td class="date">17 Sep 2026</td></tr>
+        <tr><td>Book Diwali flight</td><td class="status">Not started</td><td class="date">3 Oct 2026</td></tr>
+        <tr><td>Book parents’ HK flight</td><td class="status">Not started</td><td class="date">3 Oct 2026</td></tr>
+        <tr><td>Check parents’ HK Visa renewal</td><td class="status">Not started</td><td class="date">3 Oct 2026</td></tr>
+        <tr><td>Dad US visa</td><td class="status">Not started</td><td class="date">3 Oct 2026</td></tr>
       </tbody></table></section>
     <section><h2>Sirocco</h2>
-      <table><thead><tr><th>Item</th><th>Added</th></tr></thead><tbody>
-        <tr><td>The Red book</td><td class="date">4 Sep 2026</td></tr>
-        <tr><td>HKU refund follow-up</td><td class="date">—</td></tr>
-        <tr><td>CUHK refund follow-up</td><td class="date">3 Oct 2026</td></tr>
-        <tr><td>Kristal top-20 ranking</td><td class="date">27 Sep 2026</td></tr>
-        <tr><td>Tool Restructuring</td><td class="date">3 Oct 2026</td></tr>
-        <tr><td>Activate Second Yubikey</td><td class="date">3 Oct 2026</td></tr>
-        <tr><td>HKU Winter 2026 STEM</td><td class="date">3 Oct 2026</td></tr>
-        <tr><td>Collective2</td><td class="date">3 Oct 2026</td></tr>
-        <tr><td><a href="https://startupqatar.qa/en/investment-program">Qatar Startup</a></td><td class="date">3 Oct 2026</td></tr>
+      <table><thead><tr><th>Item</th><th>Status</th><th>Added</th></tr></thead><tbody>
+        <tr><td>The Red book</td><td class="status">Not started</td><td class="date">4 Sep 2026</td></tr>
+        <tr><td>HKU refund follow-up</td><td class="status">Not started</td><td class="date">—</td></tr>
+        <tr><td>CUHK refund follow-up</td><td class="status">Not started</td><td class="date">3 Oct 2026</td></tr>
+        <tr><td>Kristal top-20 ranking</td><td class="status">Not started</td><td class="date">27 Sep 2026</td></tr>
+        <tr><td>Tool Restructuring</td><td class="status">Not started</td><td class="date">3 Oct 2026</td></tr>
+        <tr><td>Activate Second Yubikey</td><td class="status">Not started</td><td class="date">3 Oct 2026</td></tr>
+        <tr><td>HKU Winter 2026 STEM</td><td class="status">Not started</td><td class="date">3 Oct 2026</td></tr>
+        <tr><td>Collective2</td><td class="status">Not started</td><td class="date">3 Oct 2026</td></tr>
+        <tr><td><a href="https://startupqatar.qa/en/investment-program">Qatar Startup</a></td><td class="status">Not started</td><td class="date">3 Oct 2026</td></tr>
       </tbody></table></section>
   </div>
   <div id="done" class="hidden">
